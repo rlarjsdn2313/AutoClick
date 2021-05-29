@@ -12,7 +12,7 @@ int main() {
     int time = 0;
     int check = 1;
 
-    while (check != 0) {
+    while (check != 0 || GetAsyncKeyState(VK_F3)) {
         if (check == 1) {
             printing();
 

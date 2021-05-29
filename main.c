@@ -4,7 +4,7 @@
 #include <windows.h>
 #include <winuser.h>
 
-void printing();
+void printing(int time);
 int click(int time);
 
 
@@ -14,13 +14,14 @@ int main() {
 
     while (check != 0 || GetAsyncKeyState(VK_F3)) {
         if (check == 1) {
-            printing();
+            printing(time);
+            check = -1;
+        } 
 
+        if (GetAsyncKeyState(VK_F5)) {
             printf("Input Time(1000 = 1s) : ");
             scanf("%d", &time);
-            printf("Listening...\n");
-
-            check = -1;
+            check = 1;
         }
 
 
@@ -51,11 +52,11 @@ int click(int time) {
     }
 }
 
-void printing() {
+void printing(int time) {
     system("cls");
     printf("AutoClicker1.0\n");
     printf("===Description===\n");
-    printf("1. F1 : Start Clicking\n");
+    printf("1. F1 : Start Clicking(%dms)\n", time);
     printf("2. F4 : Stop Clicking\n");
     printf("3. F3 : Exit AutoClicker1.0\n");
 }

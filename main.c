@@ -55,6 +55,6 @@ void printing() {
     printf("===Description===\n");
     printf("1. F1 : Start Clicking\n");
     printf("2. F2 : Stop Clicking\n");
-    printf("3. F3 : Exit AutoClicker1.0");
+    printf("3. F3 : Exit AutoClicker1.0\n");
 }
 

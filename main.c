@@ -58,6 +58,8 @@ void printing(int time) {
     printf("===Description===\n");
     printf("1. F1 : Start Clicking(%dms)\n", time);
     printf("2. F4 : Stop Clicking\n");
+    printf("3. F5 : Set time\b");
     printf("3. F3 : Exit AutoClicker1.0\n");
+
 }
 

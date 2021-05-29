@@ -12,7 +12,7 @@ int main() {
     int time = 0;
     int check = 1;
 
-    while (check != 0 || GetAsyncKeyState(VK_F3)) {
+    while (check != 0 && !GetAsyncKeyState(VK_F3)) {
         if (check == 1) {
             printing(time);
             check = -1;
@@ -59,7 +59,7 @@ void printing(int time) {
     printf("1. F1 : Start Clicking(%dms)\n", time);
     printf("2. F4 : Stop Clicking\n");
     printf("3. F5 : Set time\n");
-    printf("3. F3 : Exit AutoClicker1.0\n");
+    printf("4. F3 : Exit AutoClicker1.0\n");
 
 }
 
